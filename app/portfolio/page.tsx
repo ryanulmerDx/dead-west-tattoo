@@ -36,7 +36,7 @@ export default function PortfolioPage() {
       <Section>
         {/* Jamie Lee Section */}
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Jamie Lee</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Jamie Lee's Portfolio</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolioItems.map((item) => (
               <div 
