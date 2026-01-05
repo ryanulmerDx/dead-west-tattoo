@@ -52,7 +52,7 @@ export default function Home() {
       <Section className="bg-neutral-950 border-y border-neutral-800">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
-            Why Dead West Tattoo
+            Why Dead West Studios
           </h2>
         </div>
 
