@@ -102,7 +102,7 @@ export default function ArtistsPage() {
 
                   {artist.portfolioLink && (
                     <div className="mb-6 md:mb-8">
-                      <Button href={artist.portfolioLink} variant="outline">
+                      <Button href={artist.portfolioLink} variant="outline" size="lg">
                         {artist.name.split(' ')[0]} {artist.name.split(' ')[1]}'s Portfolio
                       </Button>
                     </div>
@@ -110,7 +110,7 @@ export default function ArtistsPage() {
 
                   {artist.id === 2 && (
                     <div className="mb-6 md:mb-8">
-                      <Button href="#" variant="outline">
+                      <Button href="#" variant="outline" size="lg">
                         Book with Tait
                       </Button>
                     </div>
