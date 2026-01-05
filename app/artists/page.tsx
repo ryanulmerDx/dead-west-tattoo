@@ -59,7 +59,8 @@ export default function ArtistsPage() {
                     />
                   </div>
 
-                  <div className="pt-4 border-t border-neutral-800">
+                  {/* Booking Info - Desktop Only */}
+                  <div className="hidden md:block pt-4 border-t border-neutral-800">
                     <h3 className="text-sm md:text-base font-semibold text-neutral-300 uppercase tracking-wide mb-2 md:mb-3">
                       Booking Information
                     </h3>
@@ -115,6 +116,16 @@ export default function ArtistsPage() {
                       </Button>
                     </div>
                   )}
+
+                  {/* Booking Info - Mobile Only */}
+                  <div className="md:hidden pt-4 border-t border-neutral-800">
+                    <h3 className="text-sm font-semibold text-neutral-300 uppercase tracking-wide mb-2">
+                      Booking Information
+                    </h3>
+                    <p className="text-neutral-400 text-base break-words">
+                      {artist.bookingNotes}
+                    </p>
+                  </div>
                 </div>
               </div>
             </Card>
