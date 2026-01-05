@@ -47,26 +47,19 @@ export default function ArtistsPage() {
           {artists.map((artist) => (
             <Card key={artist.id} hover className="p-6 md:p-10 lg:p-12 overflow-hidden">
               <div className="flex flex-col md:grid md:grid-cols-[350px_1fr] lg:grid-cols-[450px_1fr] gap-6 md:gap-10 lg:gap-12">
-                {/* Artist Photo */}
+                {/* Artist Photo and Specialties */}
                 <div className="w-full md:w-[350px] lg:w-[450px] mx-auto md:mx-0">
-                  <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border-2 border-neutral-700">
+                  <div className="w-full aspect-square rounded-lg overflow-hidden border-2 border-neutral-700 mb-6">
                     <Image
                       src={artist.photo}
                       alt={artist.name}
                       width={450}
-                      height={338}
+                      height={450}
                       className="object-cover w-full h-full"
                     />
                   </div>
-                </div>
-
-                {/* Artist Info */}
-                <div className="min-w-0">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 break-words">
-                    {artist.name}
-                  </h2>
                   
-                  <div className="mb-6 md:mb-8">
+                  <div>
                     <h3 className="text-sm md:text-base font-semibold text-olive-500 uppercase tracking-wide mb-3 md:mb-4">
                       Specialties
                     </h3>
@@ -81,7 +74,14 @@ export default function ArtistsPage() {
                       ))}
                     </div>
                   </div>
+                </div>
 
+                {/* Artist Info */}
+                <div className="min-w-0">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 break-words">
+                    {artist.name}
+                  </h2>
+                  
                   <div className="mb-6 md:mb-8">
                     <h3 className="text-sm md:text-base font-semibold text-neutral-300 uppercase tracking-wide mb-3 md:mb-4">
                       About
