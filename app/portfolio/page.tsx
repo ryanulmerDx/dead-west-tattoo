@@ -30,31 +30,31 @@ export default function PortfolioPage() {
     <>
       <PageHeader 
         title="Portfolio"
-        description="Browse our collection of custom tattoos, from bold traditional pieces to delicate fine line work."
+        description="Please enjoy a collection of custom tattoos, from our Dead West Studios Artists."
       />
 
       <Section>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {portfolioItems.map((item) => (
-            <div 
-              key={item.id} 
-              className="aspect-square group cursor-pointer bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-olive-500/10 hover:border-olive-500/50"
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={item.image}
-                  alt={`Tattoo work ${item.id}`}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+        {/* Jamie Lee Section */}
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Jamie Lee</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {portfolioItems.map((item) => (
+              <div 
+                key={item.id} 
+                className="aspect-square group cursor-pointer bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-olive-500/10 hover:border-olive-500/50"
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={item.image}
+                    alt={`Tattoo work ${item.id}`}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center text-neutral-400">
-          <p>Looking for a specific style or artist? Reach out to discuss your vision.</p>
+            ))}
+          </div>
         </div>
       </Section>
 
