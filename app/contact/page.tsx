@@ -76,7 +76,7 @@ export default function ContactPage() {
                 Response Time
               </h3>
               <p className="text-neutral-300">
-                We typically respond to inquiries within 1-3 business days. During busy periods, please allow additional time for a response.
+                We typically respond to inquiries within 3-5 business days. During busy periods, please allow additional time for a response.
               </p>
             </div>
           </div>
