@@ -17,34 +17,20 @@ const tattooServices = [
     features: [
       "One-on-one consultation",
       "Custom design development",
-      "Multiple revision rounds",
       "Professional execution",
     ],
   },
   {
     id: 2,
-    title: "Flash Tattoos",
-    description: "Pre-designed artwork ready to tattoo. Browse our rotating collection of flash designs for quicker booking and completion.",
+    title: "Cover-Ups & Reworks",
+    description: "Transform existing tattoos into fresh new pieces. Our artists specialize in creative solutions for outdated or unwanted ink.",
     features: [
-      "Pre-drawn designs",
-      "Faster scheduling",
-      "Walk-in availability may vary",
-      "Catalog updates regularly",
+      "Creative redesign options",
+      "Expert color and placement strategy",
     ],
   },
   {
     id: 3,
-    title: "Cover-Ups & Reworks",
-    description: "Transform existing tattoos into fresh new pieces. Our artists specialize in creative solutions for outdated or unwanted ink.",
-    features: [
-      "Assessment consultation",
-      "Creative redesign options",
-      "Expert color and placement strategy",
-      "Before and after documentation",
-    ],
-  },
-  {
-    id: 4,
     title: "Touch-Ups & Repairs",
     description: "Refresh and restore your existing tattoos. Whether aging or faded, we can bring your ink back to life.",
     features: [
@@ -59,25 +45,23 @@ const tattooServices = [
 const beautyServices = [
   {
     id: 1,
-    title: "Lash Extensions",
-    description: "Professional lash extension services to enhance your natural beauty.",
-    features: [
-      "Classic lash extensions",
-      "Volume lash extensions",
-      "Hybrid lash sets",
-      "Lash fills and maintenance",
-    ],
+    title: "Hair Cut",
+    description: "Professional hair services are also available at our studio.",
   },
   {
     id: 2,
-    title: "Hair Styling",
-    description: "Expert hair styling services for any occasion.",
-    features: [
-      "Cuts and styling",
-      "Color services",
-      "Special occasion styling",
-      "Consultation available",
-    ],
+    title: "Hair Color",
+    description: "Professional color services are also available at our studio.",
+  },
+  {
+    id: 3,
+    title: "Hair Style",
+    description: "Professional hair styling services are also available at our studio.",
+  },
+  {
+    id: 4,
+    title: "Lash Extensions",
+    description: "Professional lash extension services are also available at our studio.",
   },
 ];
 
@@ -130,7 +114,7 @@ export default function ServicesPage() {
         <div className="mt-12 p-6 bg-neutral-900 rounded-lg border border-neutral-800">
           <h3 className="text-xl font-bold mb-3">Tattoo Pricing Information</h3>
           <p className="text-neutral-300 mb-4">
-            Pricing varies based on size, complexity, placement, and artist. During your consultation, we will provide a detailed quote tailored to your specific project.
+            Pricing varies based on many factors, possibly including size, complexity, placement, and artist. During your consultation, we will provide a detailed quote tailored to your specific project.
           </p>
           <p className="text-neutral-400 text-sm">
             All tattoo services require a deposit to secure your appointment. See our policies page for complete details.
@@ -140,27 +124,21 @@ export default function ServicesPage() {
 
       {/* Beauty Services Section */}
       <Section className="bg-neutral-950 border-y border-neutral-800">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Lash & Hair Services</h2>
-          <p className="text-neutral-400 mb-8">
-            Professional lash extensions and hair styling services also available at our studio.
-          </p>
-          <a
-            href="[INSERT LINK HERE]"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-olive-700 text-white rounded-lg hover:bg-olive-600 transition-colors"
-          >
-            <span>View Lash & Hair Services</span>
-            <svg 
-              className="w-5 h-5" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Beauty Services</h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+          {beautyServices.map((service) => (
+            <Card key={service.id} hover className="p-6">
+              <h3 className="text-xl md:text-2xl font-bold mb-2">
+                {service.title}
+              </h3>
+              <p className="text-neutral-400">
+                {service.description}
+              </p>
+            </Card>
+          ))}
         </div>
       </Section>
 
