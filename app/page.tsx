@@ -115,13 +115,18 @@ export default function Home() {
 
       {/* Services Preview */}
       <Section>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href="/artists" variant="outline" size="lg">
-            Meet Our Artists
-          </Button>
-          <Button href="/services" variant="outline" size="lg">
-            View Services
-          </Button>
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-8">
+            Explore Dead West Studios
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/artists" variant="outline" size="lg">
+              Meet Our Artists
+            </Button>
+            <Button href="/services" variant="outline" size="lg">
+              View Services
+            </Button>
+          </div>
         </div>
       </Section>
 
