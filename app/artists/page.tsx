@@ -47,9 +47,9 @@ export default function ArtistsPage() {
           {artists.map((artist) => (
             <Card key={artist.id} hover className="p-6 md:p-10 lg:p-12 overflow-hidden">
               <div className="flex flex-col md:grid md:grid-cols-[350px_1fr] lg:grid-cols-[450px_1fr] gap-6 md:gap-10 lg:gap-12">
-                {/* Artist Photo */}
+                {/* Artist Photo and Booking */}
                 <div className="w-full md:w-[350px] lg:w-[450px] mx-auto md:mx-0">
-                  <div className="w-full aspect-square rounded-lg overflow-hidden border-2 border-neutral-700">
+                  <div className="w-full aspect-square rounded-lg overflow-hidden border-2 border-neutral-700 mb-6">
                     <Image
                       src={artist.photo}
                       alt={artist.name}
@@ -57,6 +57,20 @@ export default function ArtistsPage() {
                       height={450}
                       className="object-cover w-full h-full"
                     />
+                  </div>
+
+                  <div className="pt-4 border-t border-neutral-800 mb-6">
+                    <h3 className="text-sm md:text-base font-semibold text-neutral-300 uppercase tracking-wide mb-2 md:mb-3">
+                      Booking Information
+                    </h3>
+                    <p className="text-neutral-400 text-base break-words mb-4">
+                      {artist.bookingNotes}
+                    </p>
+                    {artist.id === 2 && (
+                      <Button href="#" variant="outline" className="w-full">
+                        Book with Tait
+                      </Button>
+                    )}
                   </div>
                 </div>
 
@@ -98,15 +112,6 @@ export default function ArtistsPage() {
                       </Button>
                     </div>
                   )}
-
-                  <div className="pt-4 md:pt-6 border-t border-neutral-800">
-                    <h3 className="text-sm md:text-base font-semibold text-neutral-300 uppercase tracking-wide mb-2 md:mb-3">
-                      Booking Information
-                    </h3>
-                    <p className="text-neutral-400 text-base md:text-lg break-words">
-                      {artist.bookingNotes}
-                    </p>
-                  </div>
                 </div>
               </div>
             </Card>
