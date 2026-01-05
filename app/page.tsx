@@ -8,21 +8,13 @@ import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export default function Home() {
-  // Featured portfolio images for homepage
-  const featuredWork = [
-    "/images/portfolio/IMG_0984.jpg",
-    "/images/portfolio/IMG_3351.jpg",
-    "/images/portfolio/IMG_6942.jpg",
-    "/images/portfolio/IMG_0252.jpg",
-  ];
-
   return (
     <>
       {/* Announcement Strip */}
       <div className="bg-olive-700 text-white py-3 border-b border-olive-800">
         <Container>
           <p className="text-center text-sm md:text-base font-medium">
-            {siteConfig.announcement}
+            Booking by appointment only— please email us to schedule your consultation.
           </p>
         </Container>
       </div>
@@ -30,14 +22,14 @@ export default function Home() {
       {/* Hero Section with Skull Logo */}
       <Section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-black">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Skull Logo */}
+          {/* Skull Logo - 50% larger */}
           <div className="mb-8 flex justify-center">
             <Image
               src="/images/logo-skull.jpeg"
               alt="Dead West Studios"
-              width={400}
-              height={400}
-              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
+              width={600}
+              height={600}
+              className="w-96 h-96 md:w-[30rem] md:h-[30rem] lg:w-[36rem] lg:h-[36rem]"
               priority
             />
           </div>
@@ -48,48 +40,11 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-neutral-400 mb-8 max-w-2xl mx-auto">
             Where craftsmanship meets creativity. Bringing your vision to life with precision and care.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button href="/contact" size="lg">
               Book a Consultation
             </Button>
-            <Button href="/portfolio" variant="outline" size="lg">
-              View Our Work
-            </Button>
           </div>
-        </div>
-      </Section>
-
-      {/* Featured Work Preview */}
-      <Section>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4">
-            Recent Work
-          </h2>
-          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-            Explore our portfolio of custom designs and client transformations.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
-          {featuredWork.map((image, i) => (
-            <Card key={i} hover className="aspect-square">
-              <div className="relative w-full h-full">
-                <Image
-                  src={image}
-                  alt={`Featured tattoo work ${i + 1}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <Button href="/portfolio" variant="outline" size="lg">
-            View Full Portfolio
-          </Button>
         </div>
       </Section>
 
@@ -116,7 +71,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-bold mb-2">Expert Artists</h3>
             <p className="text-neutral-400">
-              Skilled professionals with years of experience in diverse tattoo styles.
+              Skilled professionals with over 15 years of experience in tattooing.
             </p>
           </div>
 
@@ -134,7 +89,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-bold mb-2">Custom Designs</h3>
             <p className="text-neutral-400">
-              Collaborative process to create unique artwork tailored to your vision.
+              Let us create unique artwork tailored to your vision that you'll love to show off.
             </p>
           </div>
 
@@ -160,26 +115,20 @@ export default function Home() {
 
       {/* Services Preview */}
       <Section>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-              Comprehensive Tattoo Services
-            </h2>
-            <p className="text-lg text-neutral-400 mb-6">
-              From intricate custom pieces to cover-ups and touch-ups, our studio offers a full range of professional tattoo services.
-            </p>
-            <Button href="/services" variant="outline">
-              Explore Services
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
+            Comprehensive Tattoo Services
+          </h2>
+          <p className="text-lg text-neutral-400 mb-8">
+            From intricate custom pieces to cover-ups and touch-ups, our studio offers a full range of professional tattoo services.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/artists" variant="outline" size="lg">
+              Meet Our Artists
             </Button>
-          </div>
-          <div className="relative aspect-video rounded-lg overflow-hidden border border-neutral-800">
-            <Image
-              src="/images/portfolio/IMG_9365.jpg"
-              alt="Tattoo services"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+            <Button href="/services" variant="outline" size="lg">
+              View Services
+            </Button>
           </div>
         </div>
       </Section>
