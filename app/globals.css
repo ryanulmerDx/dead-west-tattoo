@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .olive-glow {
+    @apply shadow-[0_0_20px_rgba(109,116,86,0.15)];
+  }
+  
+  .olive-border-glow {
+    @apply border-olive-600 shadow-[0_0_15px_rgba(109,116,86,0.2)];
+  }
+}
