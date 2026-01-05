@@ -33,8 +33,8 @@ const artists = [
     bookingNotes: "Tait is currently accepting new clients. Please contact us to schedule services.",
     photo: "/images/artists/placeholder.jpg", // Update with actual photo path
     portfolioLink: null,
-    instagram: null,
-    facebook: null,
+    instagram: "#",
+    facebook: "#",
   },
 ];
 
