@@ -47,21 +47,41 @@ const beautyServices = [
     id: 1,
     title: "Hair Cut",
     description: "Professional hair services are also available at our studio.",
+    features: [
+      "Precision cuts",
+      "Style consultation",
+      "Professional finishing",
+    ],
   },
   {
     id: 2,
     title: "Hair Color",
     description: "Professional color services are also available at our studio.",
+    features: [
+      "Full color",
+      "Highlights and lowlights",
+      "Color correction",
+    ],
   },
   {
     id: 3,
     title: "Hair Style",
     description: "Professional hair styling services are also available at our studio.",
+    features: [
+      "Event styling",
+      "Everyday looks",
+      "Consultation included",
+    ],
   },
   {
     id: 4,
     title: "Lash Extensions",
     description: "Professional lash extension services are also available at our studio.",
+    features: [
+      "Classic sets",
+      "Volume sets",
+      "Lash fills",
+    ],
   },
 ];
 
@@ -128,15 +148,31 @@ export default function ServicesPage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Beauty Services</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {beautyServices.map((service) => (
-            <Card key={service.id} hover className="p-6">
-              <h3 className="text-xl md:text-2xl font-bold mb-2">
+            <Card key={service.id} hover className="p-6 md:p-8">
+              <h3 className="text-2xl md:text-3xl font-bold mb-3">
                 {service.title}
               </h3>
-              <p className="text-neutral-400">
+              <p className="text-neutral-400 mb-6">
                 {service.description}
               </p>
+              <ul className="space-y-2">
+                {service.features.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg 
+                      className="w-5 h-5 text-olive-500 mr-2 mt-0.5 flex-shrink-0" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-neutral-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </Card>
           ))}
         </div>
