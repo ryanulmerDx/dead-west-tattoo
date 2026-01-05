@@ -49,12 +49,12 @@ export default function ArtistsPage() {
               <div className="flex flex-col md:grid md:grid-cols-[350px_1fr] lg:grid-cols-[450px_1fr] gap-6 md:gap-10 lg:gap-12">
                 {/* Artist Photo */}
                 <div className="w-full md:w-[350px] lg:w-[450px] mx-auto md:mx-0">
-                  <div className="w-full aspect-square rounded-lg overflow-hidden border-2 border-neutral-700">
+                  <div className="w-full aspect-[4/3] rounded-lg overflow-hidden border-2 border-neutral-700">
                     <Image
                       src={artist.photo}
                       alt={artist.name}
                       width={450}
-                      height={450}
+                      height={338}
                       className="object-cover w-full h-full"
                     />
                   </div>
