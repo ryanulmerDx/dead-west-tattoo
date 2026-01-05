@@ -7,11 +7,11 @@ export const siteConfig = {
   
   navigation: [
     { name: "Home", href: "/" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Artists", href: "/artists" },
     { name: "Services", href: "/services" },
-    { name: "FAQs", href: "/faqs" },
+    { name: "Artists", href: "/artists" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "Policies", href: "/policies" },
+    { name: "FAQs", href: "/faqs" },
   ],
   
   socialLinks: {
