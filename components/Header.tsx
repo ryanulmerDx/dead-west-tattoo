@@ -98,7 +98,11 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-4">
-              <Button href="/contact" size="md" className="w-full">
+              <Button 
+                href="/contact" 
+                size="md"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Contact
               </Button>
             </div>
