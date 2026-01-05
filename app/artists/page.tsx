@@ -1,24 +1,36 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import { CTABand } from "@/components/CTABand";
+import { Button } from "@/components/Button";
 
 export const metadata: Metadata = {
   title: "Artists",
-  description: "Meet our talented team of professional tattoo artists.",
+  description: "Meet our talented team of professional artists.",
 };
 
 // Artist data
 const artists = [
   {
     id: 1,
-    name: "Jamie Ulmer",
-    specialties: ["Black & Grey", "Color Work", "Realism", "Pet Portraits"],
-    bio: "[Artist bio to be added - describe experience, style, and approach to tattooing]",
-    bookingNotes: "Currently accepting new clients. Contact us to schedule a consultation.",
-    photo: "/images/artists/IMG_3810.JPG", // Artist photo
+    name: "Jamie Lee (Owner/Tattooer)",
+    specialties: ["Black & Grey", "Color", "Realism", "Pet Portraits"],
+    bio: "Native born Tucsonan Jamie Lee Ulmer has been tattooing for over 15 years. Her award winning career has taken her all around the country and abroad creating incredible realism tattoos for her many clients.",
+    bookingNotes: "Jamie Lee is currently accepting new clients. Please contact us to schedule a consultation.",
+    photo: "/images/artists/IMG_3810.JPG",
+    portfolioLink: "/portfolio",
+  },
+  {
+    id: 2,
+    name: "Tait Schneider (Title)",
+    specialties: ["Hair Cut", "Color", "Style", "Lash Extensions"],
+    bio: "Tait has been working in the beauty industry for over XX years. Training via XXXXX Courses etc.",
+    bookingNotes: "Tait is currently accepting new clients. Please contact us to schedule services.",
+    photo: "/images/artists/placeholder.jpg", // Update with actual photo path
+    portfolioLink: null,
   },
 ];
 
@@ -27,11 +39,11 @@ export default function ArtistsPage() {
     <>
       <PageHeader 
         title="Our Artists"
-        description="Meet the talented artist behind Dead West Tattoo Studio."
+        description="Meet the talented artists behind Dead West Studio."
       />
 
       <Section>
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4 space-y-12">
           {artists.map((artist) => (
             <Card key={artist.id} hover className="p-6 md:p-10 lg:p-12 overflow-hidden">
               <div className="flex flex-col md:grid md:grid-cols-[280px_1fr] lg:grid-cols-[350px_1fr] gap-6 md:gap-10 lg:gap-12">
@@ -79,6 +91,14 @@ export default function ArtistsPage() {
                     </p>
                   </div>
 
+                  {artist.portfolioLink && (
+                    <div className="mb-6 md:mb-8">
+                      <Button href={artist.portfolioLink} variant="outline">
+                        View Portfolio
+                      </Button>
+                    </div>
+                  )}
+
                   <div className="pt-4 md:pt-6 border-t border-neutral-800">
                     <h3 className="text-sm md:text-base font-semibold text-neutral-300 uppercase tracking-wide mb-2 md:mb-3">
                       Booking Information
@@ -98,14 +118,14 @@ export default function ArtistsPage() {
             Ready to Get Started?
           </h3>
           <p className="text-neutral-300">
-            Reach out via email to schedule a consultation and discuss your tattoo vision with Jamie.
+            Reach out via email to schedule a consultation and discuss your vision with our artists.
           </p>
         </div>
       </Section>
 
       <CTABand 
         title="Book Your Consultation"
-        description="Connect with Jamie to bring your tattoo vision to life."
+        description="Connect with our talented team to bring your vision to life."
       />
     </>
   );
