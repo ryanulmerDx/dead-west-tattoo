@@ -46,15 +46,15 @@ export default function ArtistsPage() {
         <div className="max-w-5xl mx-auto px-4 space-y-12">
           {artists.map((artist) => (
             <Card key={artist.id} hover className="p-6 md:p-10 lg:p-12 overflow-hidden">
-              <div className="flex flex-col md:grid md:grid-cols-[280px_1fr] lg:grid-cols-[350px_1fr] gap-6 md:gap-10 lg:gap-12">
+              <div className="flex flex-col md:grid md:grid-cols-[350px_1fr] lg:grid-cols-[450px_1fr] gap-6 md:gap-10 lg:gap-12">
                 {/* Artist Photo */}
-                <div className="w-full md:w-[280px] lg:w-[350px] mx-auto md:mx-0">
+                <div className="w-full md:w-[350px] lg:w-[450px] mx-auto md:mx-0">
                   <div className="w-full aspect-square rounded-lg overflow-hidden border-2 border-neutral-700">
                     <Image
                       src={artist.photo}
                       alt={artist.name}
-                      width={350}
-                      height={350}
+                      width={450}
+                      height={450}
                       className="object-cover w-full h-full"
                     />
                   </div>
@@ -94,7 +94,7 @@ export default function ArtistsPage() {
                   {artist.portfolioLink && (
                     <div className="mb-6 md:mb-8">
                       <Button href={artist.portfolioLink} variant="outline">
-                        View Portfolio
+                        {artist.name.split(' ')[0]} {artist.name.split(' ')[1]}'s Portfolio
                       </Button>
                     </div>
                   )}
