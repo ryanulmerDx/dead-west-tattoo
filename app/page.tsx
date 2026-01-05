@@ -115,21 +115,13 @@ export default function Home() {
 
       {/* Services Preview */}
       <Section>
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-            Comprehensive Tattoo Services
-          </h2>
-          <p className="text-lg text-neutral-400 mb-8">
-            From intricate custom pieces to cover-ups and touch-ups, our studio offers a full range of professional tattoo services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/artists" variant="outline" size="lg">
-              Meet Our Artists
-            </Button>
-            <Button href="/services" variant="outline" size="lg">
-              View Services
-            </Button>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/artists" variant="outline" size="lg">
+            Meet Our Artists
+          </Button>
+          <Button href="/services" variant="outline" size="lg">
+            View Services
+          </Button>
         </div>
       </Section>
 
