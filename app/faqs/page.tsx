@@ -16,11 +16,11 @@ const faqs = [
   },
   {
     question: "Do I need to pay a deposit?",
-    answer: "Yes, all appointments require a deposit to secure your booking. The deposit amount and payment details will be discussed during the consultation. Deposits are non-refundable but can be applied to your final tattoo cost.",
+    answer: "Yes, all appointments require a deposit to secure your booking. The deposit amount and payment details will be discussed during the consultation. Deposits are non-refundable and will be applied to your final tattoo cost.",
   },
   {
     question: "How should I prepare for my appointment?",
-    answer: "Get a good night's sleep, eat a full meal beforehand, stay hydrated, and avoid alcohol or blood-thinning medications. Wear comfortable clothing that provides easy access to the area being tattooed. Bring a valid ID and any reference images if applicable.",
+    answer: "Get a good night's sleep, eat a full meal beforehand, stay hydrated, and avoid alcohol or blood-thinning medications. Wear comfortable clothing that provides easy access to the area being tattooed. Make sure to bring a valid ID. You also may want to bring snacks and drinks for a longer session.\n\n*Complimentary refreshments are available for our clients.",
   },
   {
     question: "How long will my tattoo take?",
@@ -29,6 +29,10 @@ const faqs = [
   {
     question: "Does getting a tattoo hurt?",
     answer: "Pain tolerance varies from person to person and depends on placement. Some areas are more sensitive than others. Most clients describe the sensation as manageable discomfort. Your artist can discuss pain management strategies during your consultation.",
+  },
+  {
+    question: "Can I use numbing cream for my tattoo session?",
+    answer: "The use of topical numbing cream can create issues with the healing process. If you intend to use any sort of pre-tattoo product it needs to be discussed in advance with your artist.",
   },
   {
     question: "Can I bring a friend?",
@@ -40,7 +44,7 @@ const faqs = [
   },
   {
     question: "How do I care for my new tattoo?",
-    answer: "Proper aftercare is crucial for healing and preserving your tattoo. We provide detailed written instructions after your session, along with product recommendations. Follow these carefully and reach out if you have any concerns during healing.",
+    answer: "Proper aftercare is crucial for healing and preserving your tattoo. We provide detailed written instructions at your session. Follow these carefully and reach out if you have any questions or concerns during healing.",
   },
   {
     question: "When can I go swimming or exercise after getting tattooed?",
@@ -56,7 +60,7 @@ const faqs = [
   },
   {
     question: "What is your minimum age requirement?",
-    answer: "Clients must be 18 years or older with valid government-issued photo ID. No exceptions.",
+    answer: "We understand that some states (including AZ) allow minors to be tattooed with proper parental consent. However, we prefer our clients to be 18 years of age or older with valid government-issued photo ID.",
   },
   {
     question: "Can you replicate another artist's work?",
@@ -64,7 +68,7 @@ const faqs = [
   },
   {
     question: "What forms of payment do you accept?",
-    answer: "Payment details including accepted methods will be discussed during your consultation and confirmed when booking your appointment.",
+    answer: "Payment details including accepted methods will be discussed during your consultation and confirmed when booking your appointment. Cash is always accepted. Please speak with your artist directly regarding any payment questions or concerns.",
   },
 ];
 
