@@ -99,12 +99,7 @@ export function Header() {
             ))}
             <Link
               href="/contact"
-              className={cn(
-                "block py-3 text-base font-medium transition-colors hover:text-olive-500 focus:outline-none focus:ring-2 focus:ring-olive-500 rounded",
-                pathname === "/contact" 
-                  ? "text-olive-500" 
-                  : "text-neutral-300"
-              )}
+              className="block py-3 text-base font-medium text-olive-500 hover:text-olive-400 transition-colors focus:outline-none focus:ring-2 focus:ring-olive-500 rounded"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
