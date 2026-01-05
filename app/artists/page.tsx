@@ -59,16 +59,14 @@ export default function ArtistsPage() {
                     />
                   </div>
 
-                  {artist.id === 1 && (
-                    <div className="pt-4 border-t border-neutral-800">
-                      <h3 className="text-sm md:text-base font-semibold text-neutral-300 uppercase tracking-wide mb-2 md:mb-3">
-                        Booking Information
-                      </h3>
-                      <p className="text-neutral-400 text-base break-words">
-                        {artist.bookingNotes}
-                      </p>
-                    </div>
-                  )}
+                  <div className="pt-4 border-t border-neutral-800">
+                    <h3 className="text-sm md:text-base font-semibold text-neutral-300 uppercase tracking-wide mb-2 md:mb-3">
+                      Booking Information
+                    </h3>
+                    <p className="text-neutral-400 text-base break-words">
+                      {artist.bookingNotes}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Artist Info */}
@@ -104,7 +102,7 @@ export default function ArtistsPage() {
 
                   {artist.portfolioLink && (
                     <div className="mb-6 md:mb-8">
-                      <Button href={artist.portfolioLink} variant="outline" size="lg">
+                      <Button href={artist.portfolioLink} variant="outline">
                         {artist.name.split(' ')[0]} {artist.name.split(' ')[1]}'s Portfolio
                       </Button>
                     </div>
@@ -112,7 +110,7 @@ export default function ArtistsPage() {
 
                   {artist.id === 2 && (
                     <div className="mb-6 md:mb-8">
-                      <Button href="#" variant="outline" size="lg">
+                      <Button href="#" variant="outline">
                         Book with Tait
                       </Button>
                     </div>
