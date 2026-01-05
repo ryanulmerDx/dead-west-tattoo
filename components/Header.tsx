@@ -97,15 +97,18 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="mt-4" onClick={() => setIsMenuOpen(false)}>
-              <Button 
-                href="/contact" 
-                size="md"
-                className="w-full"
-              >
-                Contact
-              </Button>
-            </div>
+            <Link
+              href="/contact"
+              className={cn(
+                "block py-3 text-base font-medium transition-colors hover:text-olive-500 focus:outline-none focus:ring-2 focus:ring-olive-500 rounded",
+                pathname === "/contact" 
+                  ? "text-olive-500" 
+                  : "text-neutral-300"
+              )}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
           </nav>
         )}
       </Container>
