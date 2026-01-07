@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Dead West Tattoo",
   domain: "https://deadwesttattoo.com",
-  email: "hello@deadwesttattoo.com",
+  email: "thedeadwestco@gmail.com",
   description: "Professional tattoo studio offering custom artwork and exceptional craftsmanship.",
   announcement: "Booking by inquiry — email us to schedule your consultation.",
   
