@@ -34,7 +34,7 @@ export function FAQItem({ question, answer }: FAQItemProps) {
       </button>
       {isOpen && (
         <div className="px-6 py-4 bg-neutral-950 border-t border-neutral-800">
-          <p className="text-neutral-300 leading-relaxed">{answer}</p>
+          <p className="text-neutral-300 leading-relaxed whitespace-pre-line">{answer}</p>
         </div>
       )}
     </div>
