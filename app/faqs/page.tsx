@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "How should I prepare for my appointment?",
-    answer: "Get a good night's sleep, eat a full meal beforehand, stay hydrated, and avoid alcohol or blood-thinning medications. Wear comfortable clothing that provides easy access to the area being tattooed. Make sure to bring a valid ID. You also may want to bring snacks and drinks for a longer session.\n\n                               *Complimentary refreshments are available for our clients.",
+    answer: "Get a good night's sleep, eat a full meal beforehand, stay hydrated, and avoid alcohol or blood-thinning medications. Wear comfortable clothing that provides easy access to the area being tattooed. Make sure to bring a valid ID. You also may want to bring snacks and drinks for a longer session.\n\n*Complimentary refreshments are available for our clients.",
   },
   {
     question: "How long will my tattoo take?",
