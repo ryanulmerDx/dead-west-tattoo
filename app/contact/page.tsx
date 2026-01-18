@@ -6,13 +6,54 @@ import { ContactForm } from "@/components/ContactForm";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch to book a consultation or inquire about our tattoo services.",
+  title: "Contact Us | Book a Tattoo Consultation in Tucson, AZ",
+  description: "Contact Dead West Studios to book your tattoo consultation in Tucson, AZ. Email us at thedeadwestco@gmail.com or use our contact form. Located at 2470 W Ruthrauff Rd.",
+  keywords: [
+    "tattoo consultation Tucson",
+    "book tattoo appointment Tucson",
+    "tattoo studio contact",
+    "Tucson tattoo booking",
+    "Dead West Studios contact"
+  ],
+  openGraph: {
+    title: "Contact Dead West Studios | Book Your Tattoo Consultation",
+    description: "Get in touch to book your custom tattoo consultation in Tucson, AZ. Professional artists ready to bring your vision to life.",
+    url: "https://deadwesttattoo.com/contact",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
+  // JSON-LD structured data for contact
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Dead West Studios",
+    "description": "Book your tattoo consultation at Dead West Studios in Tucson, AZ",
+    "url": "https://deadwesttattoo.com/contact",
+    "mainEntity": {
+      "@type": "TattooParlor",
+      "name": "Dead West Studios",
+      "email": "thedeadwestco@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2470 W Ruthrauff Rd Suite 100",
+        "addressLocality": "Tucson",
+        "addressRegion": "AZ",
+        "postalCode": "85705",
+        "addressCountry": "US"
+      }
+    }
+  };
+
   return (
     <>
+      {/* JSON-LD Script */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <PageHeader 
         title="Get in Touch"
         description="Ready to start your tattoo journey? Reach out to discuss your ideas and schedule a consultation."
