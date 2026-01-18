@@ -12,16 +12,45 @@ export function ContactForm() {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Placeholder submit - no actual functionality
-    alert("Form submission is not yet configured. Please contact us directly via email.");
-    console.log("Form data:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
@@ -87,22 +116,16 @@ export function ContactForm() {
           <label htmlFor="subject" className="block text-sm font-medium text-neutral-300 mb-2">
             Subject *
           </label>
-          <select
+          <input
+            type="text"
             id="subject"
             name="subject"
             required
             value={formData.subject}
             onChange={handleChange}
             className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-olive-500 focus:border-transparent transition-all"
-          >
-            <option value="">Select a subject</option>
-            <option value="consultation">New Tattoo Consultation</option>
-            <option value="booking">Booking Inquiry</option>
-            <option value="coverup">Cover-Up Consultation</option>
-            <option value="touchup">Touch-Up Request</option>
-            <option value="question">General Question</option>
-            <option value="other">Other</option>
-          </select>
+            placeholder="e.g., New Tattoo Consultation, Booking Inquiry, Cover-Up"
+          />
         </div>
 
         {/* Message */}
@@ -123,13 +146,21 @@ export function ContactForm() {
         </div>
 
         {/* Submit Button */}
-        <Button type="submit" className="w-full" size="lg">
-          Send Message
+        <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
 
-        <p className="text-xs text-neutral-500 text-center">
-          This form is a placeholder. For now, please contact us directly at the email address provided.
-        </p>
+        {/* Status Messages */}
+        {submitStatus === "success" && (
+          <p className="text-sm text-green-500 text-center">
+            Message sent successfully! We'll get back to you within 3-5 business days.
+          </p>
+        )}
+        {submitStatus === "error" && (
+          <p className="text-sm text-red-500 text-center">
+            There was an error sending your message. Please try again or contact us directly at thedeadwestco@gmail.com
+          </p>
+        )}
       </form>
     </Card>
   );
