@@ -98,7 +98,7 @@ export default function ArtistsPage() {
                   {(artist.instagram || artist.facebook) && (
                     <div className="mb-6 md:mb-8 flex gap-4">
                       {artist.instagram && (
-                        
+                        <a
                           href={artist.instagram}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -111,7 +111,7 @@ export default function ArtistsPage() {
                         </a>
                       )}
                       {artist.facebook && (
-                        
+                        <a
                           href={artist.facebook}
                           target="_blank"
                           rel="noopener noreferrer"
