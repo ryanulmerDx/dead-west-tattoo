@@ -25,17 +25,6 @@ const artists = [
     instagram: "https://www.instagram.com/jamielee_tattoo/",
     facebook: "https://www.facebook.com/jamieleeulmer",
   },
-  {
-    id: 2,
-    name: "Tait Schneider (Title)",
-    specialties: ["Hair Cut", "Color", "Style", "Lash Extensions"],
-    bio: "Tait has been working in the beauty industry for over XX years. Training via XXXXX Courses etc.",
-    bookingNotes: "Tait is currently accepting new clients. Please contact us to schedule services.",
-    photo: "/images/artists/placeholder.jpg", // Update with actual photo path
-    portfolioLink: null,
-    instagram: "#",
-    facebook: "#",
-  },
 ];
 
 export default function ArtistsPage() {
@@ -109,7 +98,7 @@ export default function ArtistsPage() {
                   {(artist.instagram || artist.facebook) && (
                     <div className="mb-6 md:mb-8 flex gap-4">
                       {artist.instagram && (
-                        <a
+                        
                           href={artist.instagram}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -122,7 +111,7 @@ export default function ArtistsPage() {
                         </a>
                       )}
                       {artist.facebook && (
-                        <a
+                        
                           href={artist.facebook}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -141,14 +130,6 @@ export default function ArtistsPage() {
                     <div className="mb-6 md:mb-8">
                       <Button href={artist.portfolioLink} variant="outline" size="lg" className="w-full">
                         {artist.name.split(' ')[0]} {artist.name.split(' ')[1]}'s Portfolio
-                      </Button>
-                    </div>
-                  )}
-
-                  {artist.id === 2 && (
-                    <div className="mb-6 md:mb-8">
-                      <Button href="#" variant="outline" size="lg" className="w-full">
-                        Book with Tait
                       </Button>
                     </div>
                   )}
