@@ -114,19 +114,30 @@ export function Footer() {
             &copy; {currentYear} {siteConfig.name}. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link 
-              href="/policies" 
+            <Link
+              href="/policies"
               className="hover:text-olive-500 transition-colors focus:outline-none focus:ring-2 focus:ring-olive-500 rounded"
             >
               Policies
             </Link>
-            <Link 
-              href="/faqs" 
+            <Link
+              href="/faqs"
               className="hover:text-olive-500 transition-colors focus:outline-none focus:ring-2 focus:ring-olive-500 rounded"
             >
               FAQs
             </Link>
           </div>
+        </div>
+        <div className="mt-4 text-center text-xs text-neutral-600">
+          Made by{" "}
+          <a
+            href="https://reachflowstudio.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-neutral-400 transition-colors"
+          >
+            ReachFlow Studio
+          </a>
         </div>
       </Container>
     </footer>
